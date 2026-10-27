@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>꼬마고호 미술학원 | 대구 동구 신암동 유치부·초등부·중등부 미술학원</title>
+  <meta name="description" content="꼬마고호 미술학원은 대구 동구 신암동에 위치한 유치부·초등부·중등부 미술학원입니다. 기초와 관찰을 바탕으로 아이가 스스로 생각하고 표현하는 힘을 길러줍니다." />
+  <meta property="og:title" content="꼬마고호 미술학원 | 작은 선에서 시작되는 큰 그림" />
+  <meta property="og:description" content="대구 동구 신암동, 동대구초·신성초·아양초 인근. 아이의 시선과 가능성을 존중하는 미술교육." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero-logo-mint.png" />
+  <style>
+    :root{
+      --purple:#9e54a1;
+      --mint:#27bcce;
+      --cream:#fff8dc;
+      --ink:#2b2b2b;
+      --muted:#666;
+      --line:#e9e3ea;
+      --white:#fff;
+      --soft-mint:#e9fbfd;
+      --soft-purple:#f6edf7;
+      --shadow:0 18px 45px rgba(40, 30, 30, .10);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.7;
+      word-break:keep-all;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1120px, calc(100% - 36px));margin:0 auto}
+    .topbar{
+      position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);
+      backdrop-filter:blur(12px);border-bottom:1px solid rgba(158,84,161,.12)
+    }
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--purple)}
+    .boa{width:58px;height:28px;border:5px solid var(--purple);border-top-left-radius:30px;border-top-right-radius:50px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;position:relative;border-bottom-width:7px}
+    .boa:before{content:"";position:absolute;left:-7px;top:5px;width:18px;height:18px;border:5px solid var(--purple);border-radius:50%;background:white}
+    .boa:after{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--purple)}
+    .brand small{display:block;color:var(--mint);font-weight:700;font-size:12px;margin-top:-4px}
+
+    .brand-logo{height:48px;width:auto;max-width:270px;object-fit:contain}
+    
+    .map-image-card{padding:0;overflow:hidden;display:block;background:#fff}
+    .map-image-card img{width:100%;height:auto;display:block}
+    .map-caption{padding:22px 24px}
+    .map-caption h3{margin:0 0 8px;color:var(--purple);font-size:20px}
+    .map-caption p{margin:0;color:#555;line-height:1.6}
+
+    @media(max-width:900px){.brand-logo{height:38px;max-width:210px}}
+    .menu{display:flex;align-items:center;gap:24px;font-size:15px;color:#444}
+    .menu a:hover{color:var(--purple)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:13px 20px;border-radius:999px;font-weight:800;
+      border:2px solid transparent;transition:.2s ease;line-height:1.2;
+    }
+    .btn-primary{background:var(--purple);color:white;box-shadow:0 10px 22px rgba(158,84,161,.23)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(158,84,161,.28)}
+    .btn-mint{background:var(--mint);color:white;box-shadow:0 10px 22px rgba(39,188,206,.22)}
+    .btn-outline{border-color:var(--purple);color:var(--purple);background:white}
+    .hero{
+      background:
+        radial-gradient(circle at 82% 15%, rgba(39,188,206,.16), transparent 28%),
+        radial-gradient(circle at 12% 15%, rgba(255,248,220,.9), transparent 30%),
+        linear-gradient(180deg,#fff 0%,#fff 54%,#fff8dc 54%,#fff8dc 100%);
+      padding:74px 0 54px;
+      overflow:hidden;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--purple);font-weight:900;background:var(--soft-purple);padding:8px 14px;border-radius:999px;margin-bottom:16px}
+    h1{font-size:clamp(42px,6vw,74px);line-height:1.08;margin:0 0 22px;letter-spacing:-.055em}
+    .mint{color:var(--mint)} .purple{color:var(--purple)}
+    .hero p{font-size:20px;color:#444;margin:0 0 26px;max-width:620px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+    .chip{background:white;border:1px solid var(--line);padding:9px 13px;border-radius:999px;font-size:14px;font-weight:800;color:#555}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .hero-card{
+      position:relative;background:white;border-radius:34px;padding:18px;box-shadow:var(--shadow);border:1px solid rgba(158,84,161,.12)
+    }
+    .hero-card img{border-radius:24px;width:100%;height:420px;object-fit:contain;background:#fff}
+    .floating{
+      position:static;margin-top:14px;background:white;border-radius:24px;padding:18px 20px;
+      box-shadow:0 12px 28px rgba(40,30,30,.08);border:1px solid rgba(39,188,206,.18);max-width:none
+    }
+    .floating b{color:var(--purple);font-size:20px}
+    section{padding:86px 0;background:#fff}
+    .section-head{margin-bottom:34px}
+    .section-head.center{text-align:center;max-width:760px;margin:0 auto 42px}
+    .kicker{color:var(--mint);font-weight:900;letter-spacing:.02em;margin-bottom:8px}
+    h2{font-size:clamp(30px,4vw,48px);line-height:1.18;margin:0;letter-spacing:-.045em}
+    .lead{font-size:18px;color:#555;margin-top:16px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:center}
+    .card{
+      background:white;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 12px 32px rgba(40,30,30,.06)
+    }
+    .card h3{font-size:23px;margin:0 0 10px;color:#222;letter-spacing:-.03em}
+    .card p{margin:0;color:#606060}
+    .icon{
+      width:58px;height:58px;border-radius:19px;background:var(--soft-mint);
+      display:flex;align-items:center;justify-content:center;color:var(--mint);font-weight:900;font-size:22px;margin-bottom:16px
+    }
+    .about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .about-imgs img{height:340px;object-fit:cover;border-radius:26px;box-shadow:var(--shadow)}
+    .cream{background:linear-gradient(180deg,#fff 0%,#fff 12%,var(--cream) 12%,var(--cream) 100%)}
+    .story-box{background:rgba(255,255,255,.74);border:1px solid rgba(158,84,161,.16);border-radius:34px;padding:36px;box-shadow:var(--shadow)}
+    .story-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+    .story-image{margin:0 0 26px;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(158,84,161,.12)}
+    .story-image img,.wide-image img{width:100%;display:block}
+    .story-item{background:white;border-radius:24px;padding:24px;text-align:center;border:1px solid rgba(39,188,206,.16)}
+    .story-item strong{display:block;color:var(--purple);font-size:24px;margin-bottom:6px}
+    .mint-section{
+      background:linear-gradient(180deg,#fff 0%,#fff 8%,#def8fb 8%,#27bcce 100%);
+      color:white;
+    }
+    .mint-section .section-head.center{
+      background:white;border:1px solid rgba(39,188,206,.18);border-radius:32px;padding:30px;box-shadow:var(--shadow)
+    }
+    .mint-section h2{color:var(--purple)}
+    .mint-section .kicker{color:var(--mint)}
+    .mint-section .lead{color:#333}
+    .circle-row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .circle-card{background:white;color:#333;border-radius:999px;aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;box-shadow:0 15px 32px rgba(0,0,0,.08)}
+    .circle-card b{color:var(--mint);font-size:28px;margin-bottom:8px}
+    .circle-card span{font-size:15px;color:#666}
+    .education-visual{margin-bottom:30px;border-radius:30px;overflow:hidden;box-shadow:var(--shadow);background:white}
+    .education-visual img{width:100%;display:block}
+    .wide-image{margin:28px 0 0;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(39,188,206,.14);background:white}
+    .official{background:linear-gradient(180deg,#fff 0%,#fff 18%,var(--cream) 18%,var(--cream) 100%)}
+    .official-card{background:white;border:1px solid rgba(158,84,161,.15);border-radius:30px;padding:30px;box-shadow:var(--shadow)}
+    .official-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+    .official-item{background:var(--soft-purple);border-radius:22px;padding:22px}
+    .official-item b{display:block;color:var(--purple);font-size:18px;margin-bottom:8px}
+    .fit .card{background:linear-gradient(180deg,#fff,#fff), white}
+    .program{background:#fff}
+    .program-card{overflow:hidden;padding:0}
+    .program-card .thumb{height:190px;background:var(--soft-purple)}
+    .program-card img{height:100%;width:100%;object-fit:cover}
+    .program-card .body{padding:25px}
+    .tag{display:inline-block;background:var(--soft-mint);color:var(--mint);font-weight:900;border-radius:999px;padding:6px 11px;margin-bottom:12px;font-size:13px}
+    .contents{background:linear-gradient(180deg,#fff 0%,#fff 50%,var(--soft-purple) 50%,var(--soft-purple) 100%)}
+    .review{background:var(--cream)}
+    .quote{
+      background:white;border-radius:34px;padding:30px 28px;text-align:center;
+      box-shadow:var(--shadow);font-size:clamp(20px,2.15vw,24px);font-weight:900;color:var(--purple);line-height:1.35;margin-bottom:22px;
+      white-space:nowrap;letter-spacing:-.04em
+    }
+    .review-card{background:white;border-radius:22px;padding:22px;border:1px solid rgba(158,84,161,.12)}
+    .info-box{
+      background:linear-gradient(135deg,var(--purple),#7f3e87);
+      border-radius:34px;padding:42px;color:white;box-shadow:var(--shadow)
+    }
+    .info-box h2{color:white}
+    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .info-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:22px}
+    .info-card b{display:block;font-size:19px;margin-bottom:8px}
+    .location .mapbox{
+      background:var(--soft-mint);border-radius:34px;padding:30px;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid rgba(39,188,206,.25)
+    }
+    .faq details{border:1px solid var(--line);border-radius:20px;padding:18px 22px;background:white;margin-bottom:12px}
+    .faq summary{cursor:pointer;font-weight:900;font-size:18px;color:#333}
+    .faq p{color:#666;margin:12px 0 0}
+    .final-cta{padding:70px 0;background:#fff}
+    .cta-panel{
+      background:linear-gradient(135deg,var(--cream),#fff,var(--soft-mint));border:1px solid rgba(158,84,161,.15);
+      border-radius:40px;padding:44px;text-align:center;box-shadow:var(--shadow)
+    }
+    footer{padding:38px 0;background:#333;color:#ddd;font-size:14px}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .mobile-call{
+      display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;
+      background:var(--purple);color:white;border-radius:18px;padding:14px 18px;text-align:center;font-weight:900;box-shadow:0 14px 34px rgba(0,0,0,.22)
+    }
+    @media(max-width:900px){
+      .menu{display:none}
+      .hero{padding:48px 0 36px}
+      .hero-grid,.grid-2{grid-template-columns:1fr}
+      .hero-card img{height:300px}
+      .floating{position:static;margin-top:14px;max-width:none}
+      .grid-3,.grid-4,.story-list,.circle-row,.info-grid,.official-grid{grid-template-columns:1fr}
+      .about-imgs{grid-template-columns:1fr}
+      .about-imgs img{height:240px}
+      section{padding:62px 0}
+      h1{font-size:44px}
+      .hero p{font-size:17px}
+      .circle-card{aspect-ratio:auto;border-radius:28px;min-height:170px}
+      .quote{font-size:22px}
+      .mobile-call{display:block}
+      body{padding-bottom:68px}
+      .nav{height:66px}
+    }
+  
+    /* 9차: 원래 레이아웃 유지 / 원장님 표시 구역 글자 가독성만 조정 */
+    .section-head.center .lead{max-width:690px;margin-left:auto;margin-right:auto;text-wrap:balance;line-height:1.85}
+    .section-head.center h2{text-wrap:balance}
+    .fit .card h3{line-height:1.45;word-break:keep-all}
+    .fit .card p,.contents .card p,.program-card p{line-height:1.85;word-break:keep-all;overflow-wrap:break-word}
+    .contents .card{min-width:0}
+    .review .quote{font-size:clamp(16px,1.9vw,22px);letter-spacing:-.055em;white-space:normal;text-wrap:balance;overflow-wrap:keep-all}
+    .hero-card img{object-fit:contain}
+    @media(min-width:1100px){.review .quote{white-space:nowrap}}
+    @media(max-width:720px){
+      .brand-logo{max-width:min(56vw,230px);height:auto;max-height:42px}
+      .section-head.center .lead{max-width:36ch}
+      .fit .card h3,.contents .card h3{line-height:1.4}
+      .review .quote{font-size:clamp(16px,4vw,20px);line-height:1.65;padding:22px 17px}
+    }
+
+  
+    /* 최종 문구 줄바꿈: 기존 디자인은 유지합니다. */
+    .program-card .body p { font-size: clamp(12px, 1.03vw, 15px); letter-spacing: -.045em; word-break: keep-all; }
+    .contents .card p { font-size: clamp(13px, 1.08vw, 16px); letter-spacing: -.045em; word-break: keep-all; }
+    .review .quote { white-space: normal !important; text-wrap: initial; font-size: clamp(15px, 1.65vw, 21px); letter-spacing: -.055em; }
+    @media(max-width:900px) {
+      .program-card .body p, .contents .card p {font-size: 16px;letter-spacing:-.025em}
+      .review .quote {font-size:clamp(14px,3.2vw,19px)}
+    }
+</style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"꼬마고호 미술학원",
+    "alternateName":"꼬마헨델 음악교습소",
+    "description":"대구 동구 신암동 유치부·초등부·중등부 미술학원. 아이의 시선과 가능성을 존중하며 기초와 관찰을 통해 스스로 표현하는 힘을 길러줍니다.",
+    "telephone":"010-7648-4255",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"신암남로23길 17 1층 동원맨션 상가",
+      "addressLocality":"동구",
+      "addressRegion":"대구광역시",
+      "addressCountry":"KR"
+    },
+    "areaServed":["동대구초","덕성초","신성초","아양초","대구 동구 신암동"],
+    "url":"https://example.com",
+    "sameAs":["https://naver.me/FIpeSKDH","http://pf.kakao.com/_xotMWxj"],
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:30","closes":"12:30"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"미술을 처음 시작해도 괜찮나요?","acceptedAnswer":{"@type":"Answer","text":"네, 아이의 현재 단계에서 시작해 기초부터 차근차근 지도합니다."}},
+      {"@type":"Question","name":"유치부도 수업이 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 유치부는 미술을 즐기고 다양한 재료를 경험하는 것부터 시작합니다."}},
+      {"@type":"Question","name":"체험수업이 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 상담 시 아이들은 선생님과 약 30분 정도 체험수업을 진행합니다."}},
+      {"@type":"Question","name":"상담은 어떻게 예약하나요?","acceptedAnswer":{"@type":"Answer","text":"전화로 미리 예약해주시면 됩니다."}},
+      {"@type":"Question","name":"차량 운행은 어디까지 하나요?","acceptedAnswer":{"@type":"Answer","text":"아양초, 신성초, 동대구초 차량 운행을 하고 있습니다."}},
+      {"@type":"Question","name":"음악 수업도 함께 들을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"꼬마헨델 음악교습소에서 피아노 수업을 함께 운영하고 있습니다."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="mobile-call" href="tel:01076484255">전화 상담하기 010-7648-4255</a>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="꼬마고호 미술학원 홈">
+        <img class="brand-logo" src="assets/logo-horizontal-new.png" alt="꼬마고호 미술학원 로고">
+      </a>
+      <nav class="menu" aria-label="주요 메뉴">
+        <a href="#about">학원소개</a>
+        <a href="#program">교육과정</a>
+        <a href="#review">후기</a>
+        <a href="#contact">상담안내</a>
+        <a class="btn btn-outline" href="https://naver.me/FIpeSKDH" target="_blank" rel="noopener">네이버 플레이스</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">대구 동구 신암동 · 유치부 · 초등부 · 중등부</div>
+          <h1>작은 선에서<br><span class="purple">자라나는</span> <span class="mint">큰 그림</span></h1>
+          <p>꼬마고호 미술학원은 아이의 시선과 가능성을 존중하며, 기초와 관찰을 통해 스스로 생각하고 표현하는 힘을 길러줍니다.</p>
+          <div class="chips" aria-label="주요 키워드">
+            <span class="chip">동대구초 인근</span>
+            <span class="chip">신성초 차량 운행</span>
+            <span class="chip">아양초 차량 운행</span>
+            <span class="chip">꼬마헨델 음악교습소</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:01076484255">상담 문의하기</a>
+            <a class="btn btn-mint" href="https://naver.me/FIpeSKDH" target="_blank" rel="noopener">네이버 플레이스 보기</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/hero-logo-mint.png" alt="민트색 배경의 꼬마고호 미술학원 메인 로고, 작은 선에서 자라나는 그림">
+          <div class="floating">
+            <b>행복한 꿈을 그리며 노래하는 아이들</b>
+            <p style="margin:6px 0 0;color:#666">꼬마고호 미술학원 · 꼬마헨델 음악교습소</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap grid-2">
+        <div>
+          <div class="section-head">
+            <div class="kicker">ABOUT</div>
+            <h2>아이의 시선과 가능성을 존중하는 미술교육</h2>
+            <p class="lead">꼬마고호 미술학원은 대구 동구 신암동에 위치한<br>유치부·초등부·중등부 미술학원입니다.</p>
+          </div>
+          <p>꼬마고호는 아이가 스스로 보고, 생각하고,<br>표현하는 과정을 소중히 여깁니다.</p>
+          <p>정해진 답을 따라가기보다,<br>아이만의 속도와 방식으로 기초를 쌓고<br>자신의 그림을 완성해가도록 돕습니다.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#program">수업 프로그램 보기</a>
+          </div>
+        </div>
+        <div class="about-imgs">
+          <img src="assets/art-room01.png" alt="꼬마고호 미술학원 내부 수업 공간과 책상">
+          <img src="assets/art-room02.png" alt="꼬마고호 미술학원의 밝고 넓은 미술 수업 교실">
+        </div>
+      </div>
+    </section>
+
+    <section class="cream">
+      <div class="wrap">
+        <div class="story-box">
+          <div class="section-head center">
+            <div class="kicker">BRAND STORY</div>
+            <h2>보아뱀이 상징하는 것</h2>
+            <p class="lead">작은 선 하나에서 시작해 관찰하고, 생각하고, 표현하며 아이만의 그림으로 자라나는 과정을 담았습니다.</p>
+          </div>
+          <div class="story-image">
+            <img src="assets/brand-story-new.png" alt="꼬마고호 미술학원의 보아뱀 로고와 브랜드 스토리 설명 이미지">
+          </div>
+          <div class="story-list">
+            <div class="story-item"><strong>BOA</strong><p>아이의 시선과 가능성</p></div>
+            <div class="story-item"><strong>LINE</strong><p>그림의 시작과 탄탄한 기초</p></div>
+            <div class="story-item"><strong>SPACE</strong><p>저마다 다르게 채워지는 표현</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mint-section">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="kicker">EDUCATION</div>
+          <h2>기초는 탄탄하게, 생각은 자유롭게, 표현은 자신 있게</h2>
+          <p class="lead">꼬마고호의 수업은 기초를 배우고, 반복해서 익히고, 다양한 표현에 적용하며 성장하는 과정입니다.</p>
+        </div>
+        <div class="education-visual">
+          <img src="assets/education-section-new.png" alt="꼬마고호 미술학원의 기초 반복 적용 성장 교육 과정 안내 이미지">
+        </div>
+        <div class="circle-row">
+          <div class="circle-card"><b>기초</b><span>드로잉, 형태, 구도, 색채, 명암을 단계적으로 익힙니다.</span></div>
+          <div class="circle-card"><b>반복</b><span>배운 내용을 다양한 방식으로 다시 경험합니다.</span></div>
+          <div class="circle-card"><b>적용</b><span>기초를 자신의 생각과 주제 표현에 연결합니다.</span></div>
+          <div class="circle-card"><b>성장</b><span>끝까지 완성하며 자신감과 성취감을 키웁니다.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fit">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="kicker">FIT FOR</div>
+          <h2>이런 아이에게 꼬마고호가 잘 맞습니다</h2>
+        </div>
+        <div class="grid-4">
+          <div class="card"><div class="icon">1</div><h3>표현이 서툰 아이</h3><p>그림은 좋아하지만<br>자신의 생각을 어떻게 표현해야 할지<br>어려워하는 아이</p></div>
+          <div class="card"><div class="icon">2</div><h3>무엇을 그릴지 막막한 아이</h3><p>주제를 보고 아이디어를 떠올리는 힘을 키우고 싶은 아이</p></div>
+          <div class="card"><div class="icon">3</div><h3>완성하는 힘이 필요한 아이</h3><p>작품을 끝까지 완성하며 집중력과 성취감을 경험하고 싶은 아이</p></div>
+          <div class="card"><div class="icon">4</div><h3>자신감이 필요한 아이</h3><p>자기 그림에 자부심을 느끼고 표현의 즐거움을 알고 싶은 아이</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" class="program">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="kicker">PROGRAM</div>
+          <h2>연령과 성장 단계에 맞춘 수업</h2>
+          <p class="lead">유치부부터 중등부까지, 아이의 현재 단계와 가능성에 맞춰 지도합니다.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card program-card">
+            <div class="thumb"><img src="assets/art-room01.png" alt="유치부와 초등부가 수업하는 미술학원 교실"></div>
+            <div class="body"><span class="tag">유치부</span><h3>미술을 즐기는<br>첫 단계</h3><p>다양한 재료와 표현 방법을 경험하며 자유롭게 표현하고 작은 성취감을 키워갑니다.</p></div>
+          </article>
+          <article class="card program-card">
+            <div class="thumb"><img src="assets/art-room02.png" alt="초등부 미술 수업을 위한 밝은 교실"></div>
+            <div class="body"><span class="tag">초등부</span><h3>생각하고 표현하는 미술</h3><p>주제를 이해하고<br>자신의 생각을 그림으로 표현하며<br>기본기를 단계적으로 익힙니다.</p></div>
+          </article>
+          <article class="card program-card">
+            <div class="thumb"><img src="assets/middle-art-room.jpg" alt="꼬마고호 미술학원 중등부 작품 활동과 전시 공간"></div>
+            <div class="body"><span class="tag">중등부</span><h3>생각을 실력으로 표현</h3><p>드로잉, 비례, 구도, 명암, 색채를 심화하고 작품 완성도와 표현력을 높입니다.</p></div>
+          </article>
+          <article class="card program-card">
+            <div class="thumb"><img src="assets/music-room.png" alt="꼬마헨델 음악교습소 내부와 피아노 수업 대기 공간"></div>
+            <div class="body"><span class="tag">꼬마헨델</span><h3>피아노와 음악 표현</h3><p>바른 자세, 리듬, 악보 읽기, 다양한 곡 연주를 통해 즐겁게 음악 자신감을 키웁니다.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contents">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="kicker">CLASS CONTENTS</div>
+          <h2>꼬마고호의 주요 수업</h2>
+          <p class="lead">관찰하고 선으로 표현하는 기초부터<br>다양한 재료 표현, 배운 기초를 활용하는 힘까지<br>단계적으로 성장합니다.</p>
+        </div>
+        <div class="wide-image">
+          <img src="assets/curriculum-3step.jpg" alt="꼬마고호 미술학원의 3단계 수업 커리큘럼 안내 이미지">
+        </div>
+        <div style="height:28px"></div>
+        <div class="grid-3">
+          <div class="card"><div class="icon">✏</div><h3>기초 미술교육</h3><p>드로잉, 형태, 구도, 색채, 명암 등<br>기본기를 단계적으로 익힙니다.</p></div>
+          <div class="card"><div class="icon">💭</div><h3>창의적 표현수업</h3><p>정해진 그림을 따라 그리기보다<br>아이 스스로 생각하고 표현합니다.</p></div>
+          <div class="card"><div class="icon">🎨</div><h3>다양한 재료와 기법</h3><p>연령과 수준에 맞는 재료와<br>표현 방법을 경험합니다.</p></div>
+          <div class="card"><div class="icon">🌿</div><h3>주제·창작활동</h3><p>생각하고, 구상하고, 표현하고,<br>완성하는 과정을 배웁니다.</p></div>
+          <div class="card"><div class="icon">🏆</div><h3>미술대회 및 작품활동</h3><p>도전과 성취를 경험하며<br>집중력과 자신감을 기릅니다.</p></div>
+          <div class="card"><div class="icon">🤝</div><h3>개별·협동수업</h3><p>아이의 수준에 맞춰 지도하고<br>친구들과 함께 소통하는 경험을 합니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="review" class="review">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="kicker">PARENTS REVIEW</div>
+          <h2>부모님들이 자주 말씀해주시는 변화</h2>
+        </div>
+        <div class="quote">“미술을 좋아하게 되고, 스스로 생각하고 표현하며,<br>완성해내는 힘이 자라고 있어요.”</div>
+        <div class="grid-3">
+          <div class="review-card">아이가 미술을 좋아하고 즐거워해요.</div>
+          <div class="review-card">그림 실력이 점점 늘어요.</div>
+          <div class="review-card">집에서도 스스로 그림을 그려요.</div>
+          <div class="review-card">자기 그림에 자신감과 자부심이 생겼어요.</div>
+          <div class="review-card">자신의 생각과 아이디어를 표현해요.</div>
+          <div class="review-card">선생님이 아이를 세심하게 봐주셔서 믿고 맡길 수 있어요.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="info-box">
+          <div class="section-head">
+            <div class="kicker">CONTACT</div>
+            <h2>상담은 미리 전화로 예약해주세요</h2>
+            <p class="lead" style="color:rgba(255,255,255,.9)">상담 시 아이들은 선생님과 약 30분 정도 체험수업을 진행합니다.</p>
+          </div>
+          <div class="info-grid">
+            <div class="info-card"><b>운영시간</b>평일 13:00 ~ 18:00<br>토요일 10:30 ~ 12:30<br><small>요일마다 다를 수 있습니다.</small></div>
+            <div class="info-card"><b>상담 예약</b>전화 예약 후 상담<br>아이 30분 체험수업 진행</div>
+            <div class="info-card"><b>차량 운행</b>아양초 · 신성초 · 동대구초 차량 운행</div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-mint" href="tel:01076484255">전화 상담하기</a>
+            <a class="btn btn-outline" href="http://pf.kakao.com/_xotMWxj" target="_blank" rel="noopener">카카오채널 문의</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location">
+      <div class="wrap grid-2">
+        <div>
+          <div class="section-head">
+            <div class="kicker">LOCATION</div>
+            <h2>학원 위치 안내</h2>
+            <p class="lead">꼬마고호 미술학원은<br>동대구초, 신성초, 아양초 인근 학생들이<br>많이 다니는 미술학원입니다.</p>
+          </div>
+          <p><strong>주소</strong><br>대구시 동구 신암남로23길 17, 1층 동원맨션 상가</p>
+          <p><strong>전화</strong><br>010-7648-4255</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://naver.me/FIpeSKDH" target="_blank" rel="noopener">네이버 플레이스에서 위치 보기</a>
+          </div>
+        </div>
+        <div class="mapbox map-image-card">
+          <img src="assets/map.png" alt="꼬마고호 미술학원 위치 지도">
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="kicker">FAQ</div>
+          <h2>자주 묻는 질문</h2>
+        </div>
+        <details open><summary>미술을 처음 시작해도 괜찮나요?</summary><p>네, 아이의 현재 단계에서 시작해 기초부터 차근차근 지도합니다.</p></details>
+        <details><summary>유치부도 수업이 가능한가요?</summary><p>네, 유치부는 미술을 즐기고 다양한 재료를 경험하는 것부터 시작합니다.</p></details>
+        <details><summary>체험수업이 가능한가요?</summary><p>네, 상담 시 아이들은 선생님과 약 30분 정도 체험수업을 진행합니다.</p></details>
+        <details><summary>상담은 어떻게 예약하나요?</summary><p>전화로 미리 예약해주시면 됩니다.</p></details>
+        <details><summary>차량 운행은 어디까지 하나요?</summary><p>아양초, 신성초, 동대구초 차량 운행을 하고 있습니다.</p></details>
+        <details><summary>음악 수업도 함께 들을 수 있나요?</summary><p>꼬마헨델 음악교습소에서 피아노 수업을 함께 운영하고 있습니다.</p></details>
+      </div>
+    </section>
+
+
+    <section class="official">
+      <div class="wrap">
+        <div class="official-card">
+          <div class="section-head center" style="margin-bottom:18px">
+            <div class="kicker">OFFICIAL INFO</div>
+            <h2>공식 등록 학원 안내</h2>
+            <p class="lead">행복한 꿈을 그리며 노래하는 아이들<br>꼬마고호 미술학원 · 꼬마헨델 음악교습소</p>
+          </div>
+          <div class="official-grid">
+            <div class="official-item">
+              <b>꼬마고호 미술학원</b>
+              대구동부교육지원청 신고 제2329호<br>
+              교습과목: 미술<br>
+              교습비: 12만원 · 13만원 · 14만원 · 15만원 · 16만원 · 17만원 · 18만원 · 19만원
+            </div>
+            <div class="official-item">
+              <b>꼬마헨델 음악교습소</b>
+              대구동부교육지원청 신고 제2024-162호<br>
+              교습과목: 음악 피아노<br>
+              교습비: 11만원 · 12만원 · 13만원 · 14만원 · 15만원 · 16만원
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap">
+        <div class="cta-panel">
+          <div class="kicker">상담 문의</div>
+          <h2>아이에게 맞는 수업이 궁금하시다면<br>미리 상담을 예약해주세요</h2>
+          <p class="lead">꼬마고호는 아이의 현재 모습을 세심하게 살펴보고, 아이에게 맞는 시작점을 함께 찾습니다.</p>
+          <div class="actions" style="justify-content:center">
+            <a class="btn btn-primary" href="tel:01076484255">010-7648-4255 전화하기</a>
+            <a class="btn btn-mint" href="http://pf.kakao.com/_xotMWxj" target="_blank" rel="noopener">카카오채널 문의하기</a>
+            <a class="btn btn-outline" href="https://naver.me/FIpeSKDH" target="_blank" rel="noopener">네이버 플레이스</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <strong>꼬마고호 미술학원 · 꼬마헨델 음악교습소</strong><br>
+        대구시 동구 신암남로23길 17, 1층 동원맨션 상가
+      </div>
+      <div>전화 010-7648-4255<br>평일 13:00~18:00 · 토요일 10:30~12:30<br>대구동부교육지원청 신고 학원</div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+      anchor.addEventListener('click', function(e){
+        var target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
